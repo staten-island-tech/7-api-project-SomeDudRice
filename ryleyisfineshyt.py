@@ -1,7 +1,6 @@
 import requests
-
-def getPoke(poke):
-    response = requests.get(f"https://api.clashroyale.com/v1/{poke.lower()}")
+def getCard(Card):
+    response = requests.get(f"https://api.clashroyale.com/v1/{Card.lower()}")
     if response.status_code != 200:
         print("Error fetching data!")
         return None
@@ -15,4 +14,4 @@ def getPoke(poke):
 #     }
 
 # pokemon = getPoke("Bulbasaur")
-# print(pokemon)
+# print(pokemon)``
