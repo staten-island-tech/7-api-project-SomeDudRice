@@ -1,6 +1,6 @@
 import requests
 def getrick(characters):
-    response = requests.get(f"https://rickandmortyapi.com/api/character/?name={characters.capitalize()}")
+    response = requests.get(f"https://rickandmortyapi.com/api/character/?name={characters}")
     if response.status_code != 200:
         print("Error fetching data!")
         return None
@@ -8,6 +8,7 @@ def getrick(characters):
     return {
         "name": data["name"]
     }
+
 charinfo = getrick("Rick Sanchez")
 print(charinfo)
 
